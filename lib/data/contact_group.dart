@@ -92,7 +92,11 @@ final friends = ContactGroup(
   contacts: [allContacts.elementAt(3)],
 );
 
-final work = ContactGroup(id: 2, label: 'Friends');
+final work = ContactGroup(
+  id: 2,
+  label: 'Work',
+  contacts: [allContacts.elementAt(1)],
+);
 
 List<ContactGroup> generateSeedData() {
   return [allPhone, friends, work];

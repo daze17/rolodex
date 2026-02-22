@@ -17,11 +17,11 @@ class ContactListsPage extends StatelessWidget {
 class _ContactListView extends StatelessWidget {
   const _ContactListView({
     required this.listId,
-    // this.automaticallyImplyLeading = true,
+    this.automaticallyImplyLeading = true,
   });
 
   final int listId;
-  // final bool automaticallyImplyLeading;
+  final bool automaticallyImplyLeading;
 
   @override
   Widget build(BuildContext context) {
@@ -111,5 +111,16 @@ class ContactListSection extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class ContactListDetail extends StatelessWidget {
+  const ContactListDetail({super.key, required this.listId});
+
+  final int listId;
+
+  @override
+  Widget build(BuildContext context) {
+    return _ContactListView(listId: listId, automaticallyImplyLeading: false);
   }
 }
