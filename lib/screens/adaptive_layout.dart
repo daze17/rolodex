@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:rolodex/screens/contacts.dart';
 
 import 'contact_group.dart';
 
@@ -29,7 +30,8 @@ class _AdaptiveLayoutState extends State<AdaptiveLayout> {
         if (isLargeScreen) {
           return _buildLargeScreenLayout();
         } else {
-          return const ContactGroupsPage();
+          return const ContactListsPage(listId: 0);
+          // return const ContactGroupsPage();
         }
       },
     );
